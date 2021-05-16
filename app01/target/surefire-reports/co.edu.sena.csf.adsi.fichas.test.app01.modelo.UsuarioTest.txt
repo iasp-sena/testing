@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: co.edu.sena.csf.adsi.fichas.test.app01.modelo.UsuarioTest
 -------------------------------------------------------------------------------
-Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.607 s - in co.edu.sena.csf.adsi.fichas.test.app01.modelo.UsuarioTest
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.64 s - in co.edu.sena.csf.adsi.fichas.test.app01.modelo.UsuarioTest

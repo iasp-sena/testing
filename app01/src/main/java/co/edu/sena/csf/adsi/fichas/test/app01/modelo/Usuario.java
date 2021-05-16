@@ -5,8 +5,6 @@
  */
 package co.edu.sena.csf.adsi.fichas.test.app01.modelo;
 
-import java.util.Objects;
-
 /**
  *
  * @author Ismael
@@ -14,6 +12,7 @@ import java.util.Objects;
 public class Usuario {
 
     private int id;
+    private String numeroDocumento;
     private String nombres;
     private String apellidos;
     private int edad;
@@ -25,8 +24,9 @@ public class Usuario {
         this.id = id;
     }
 
-    public Usuario(int id, String nombres, String apellidos, int edad) {
+    public Usuario(int id, String numeroDocumento, String nombres, String apellidos, int edad) {
         this.id = id;
+        this.numeroDocumento = numeroDocumento;
         this.nombres = nombres;
         this.apellidos = apellidos;
         this.edad = edad;
@@ -38,6 +38,14 @@ public class Usuario {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    public String getNumeroDocumento() {
+        return numeroDocumento;
+    }
+
+    public void setNumeroDocumento(String numeroDocumento) {
+        this.numeroDocumento = numeroDocumento;
     }
 
     public String getNombres() {

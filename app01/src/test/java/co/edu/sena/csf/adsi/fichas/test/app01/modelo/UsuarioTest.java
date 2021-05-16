@@ -5,10 +5,16 @@
  */
 package co.edu.sena.csf.adsi.fichas.test.app01.modelo;
 
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.platform.runner.JUnitPlatform;
 import org.junit.runner.RunWith;
+
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertNull;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertFalse;
 
 /**
  *
@@ -24,39 +30,39 @@ class UsuarioTest {
         //Ejecución del método a probar     -> Cuando   -> When
         String nombreDevuelto = miUsuario.getNombres();
         //Comprobar el resultado            -> Entonces -> Then
-        Assertions.assertNull(nombreDevuelto);
+        assertNull(nombreDevuelto);
     }
 
     @Test
     void getNombreCuandoNoEsNulo() {
         //Given
-        Usuario miUsuario = new Usuario(1, "Iván", "Ramirez", 20);
+        Usuario miUsuario = new Usuario(1, "123456", "Iván", "Ramirez", 20);
         //When
         String nombreDevuelto = miUsuario.getNombres();
         //
-        Assertions.assertNotNull(nombreDevuelto);
-        Assertions.assertEquals("Iván", nombreDevuelto);
+        assertNotNull(nombreDevuelto);
+        assertEquals("Iván", nombreDevuelto);
     }
 
     @Test
     void equalsCuandoEsNuloElObjeto() {
         //Given
-        Usuario miUsuario = new Usuario(1, "Iván", "Ramirez", 20);
+        Usuario miUsuario = new Usuario(1, "123456", "Iván", "Ramirez", 20);
         //When
         boolean resultado = miUsuario.equals(null);
         //
-        Assertions.assertFalse(resultado);
+        assertFalse(resultado);
     }
 
     @Test
     void equalsCuandoEsElMismoObjeto() {
         //Given
-        Usuario miUsuario = new Usuario(1, "Iván", "Ramirez", 20);
+        Usuario miUsuario = new Usuario(1, "123456", "Iván", "Ramirez", 20);
         Usuario otroUsuario = miUsuario;
         //When
         boolean resultado = miUsuario.equals(otroUsuario);
         //
-        Assertions.assertTrue(resultado);
+        assertTrue(resultado);
     }
 
     @Test
@@ -67,18 +73,18 @@ class UsuarioTest {
         //When
         boolean resultado = miUsuario.equals(otroObjeto);
         //
-        Assertions.assertTrue(resultado);
+        assertTrue(resultado);
     }
 
     @Test
     void equalsCuandoSoloElIdEsElMismo() {
         //Given
-        Usuario miUsuario = new Usuario(1, "Iván", "Ramirez", 20);
-        Usuario otroUsuario = new Usuario(1, "Pepe", "Díaz", 19);
+        Usuario miUsuario = new Usuario(1, "123456", "Iván", "Ramirez", 20);
+        Usuario otroUsuario = new Usuario(1, "123456", "Pepe", "Díaz", 19);
         //When
         boolean resultado = miUsuario.equals(otroUsuario);
         //
-        Assertions.assertTrue(resultado);
+        assertTrue(resultado);
     }
 
     @Test
@@ -89,7 +95,7 @@ class UsuarioTest {
         //When
         boolean respuesta = miUsuario.esMayorDeEdad();
         //Then
-        Assertions.assertTrue(respuesta);
+        assertTrue(respuesta);
     }
 
     @Test
@@ -100,6 +106,6 @@ class UsuarioTest {
         //When
         boolean respuesta = miUsuario.esMayorDeEdad();
         //Then
-        Assertions.assertFalse(respuesta);
+        assertFalse(respuesta);
     }
 }
