@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="4.0" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd">
+    <context-param>
+        <param-name>javax.faces.PROJECT_STAGE</param-name>
+        <param-value>Development</param-value>
+    </context-param>
+    <servlet>
+        <servlet-name>Faces Servlet</servlet-name>
+        <servlet-class>javax.faces.webapp.FacesServlet</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Faces Servlet</servlet-name>
+        <url-pattern>*.xhtml</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+    <welcome-file-list>
+        <welcome-file>index.xhtml</welcome-file>
+    </welcome-file-list>
+    
+    
+    <data-source>
+        <name>java:app/testTienda</name>
+        <class-name>com.mysql.jdbc.jdbc2.optional.MysqlDataSource</class-name>
+        <server-name>localhost</server-name>
+        <port-number>3306</port-number>
+        <database-name>db_taller_tienda</database-name>
+        <user>root</user>
+        <password>1234567890</password>
+        <property>
+            <name>zeroDateTimeBehavior</name>
+            <value>convertToNull</value>
+        </property>
+        <property>
+            <name>useSSL</name>
+            <value>false</value>
+        </property>
+        <initial-pool-size>8</initial-pool-size>
+        <max-pool-size>32</max-pool-size>
+        <min-pool-size>8</min-pool-size>
+    </data-source>
+</web-app>

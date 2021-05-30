@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="apptesttienda:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>apptesttienda</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="apptesttienda-1.0.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="apptesttienda:war exploded" />
+    </root>
+  </artifact>
+</component>
